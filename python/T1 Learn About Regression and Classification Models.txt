@@ -1,0 +1,61 @@
+✅ T1: Learn About Regression and Classification Models
+In supervised learning, there are two main types of problems: Regression and Classification.
+
+🔹 1. Regression Models
+Goal: Predict a continuous numerical value.
+
+📌 Examples:
+Predicting house prices.
+
+Forecasting temperature.
+
+Estimating sales or revenue.
+
+📘 Common Algorithms:
+Linear Regression
+
+Decision Tree Regressor
+
+Random Forest Regressor
+
+Support Vector Regressor (SVR)
+
+2. Classification Models
+Goal: Predict a category or class label.
+
+ Examples:
+Email classification: spam or not spam
+
+Disease prediction: positive or negative
+
+Image classification: cat, dog, car, etc.
+
+ Common Algorithms:
+Logistic Regression
+
+Decision Tree Classifier
+
+Random Forest Classifier
+
+K-Nearest Neighbors (KNN)
+
+Support Vector Machine (SVM)
+
+
+
+
+
+
+Aspect		Regression			Classification
+Output		Continuous values (e.g. 45.6)	Discrete classes (e.g. "Yes" or "No")
+Evaluation	MSE, MAE, R²			Accuracy, Precision, Recall, F1-score
+Algorithms	Linear Regression, SVR		Logistic Regression, SVM, KNN
+
+
+
+
+
+
+
+
+

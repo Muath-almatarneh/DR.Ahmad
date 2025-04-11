@@ -1,0 +1,21 @@
+Obesity Dataset Analysis and Classification Results:
+1- Checked dataset for missing values:
+-----No missing values found.
+
+2- Checked for outliers:
+------Verified that data contains no outliers.
+
+3-Data Preparation Steps:
+----------Converted categorical attributes to numeric.
+----------Applied normalization to numeric data.
+
+
+4-Classification Models Evaluated:
+-----------Decision Tree (J48): Accuracy = 93.79%
+-----------Random Forest: Accuracy = 95.36% (Selected as the best-performing model)
+
+
+
+
+
+

@@ -1,0 +1,195 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     ObesityDataSet_raw_and_data_sinthetic-weka.filters.supervised.attribute.NominalToBinary-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    2111
+Attributes:   27
+              Age
+              Gender=Male
+              Height
+              Weight
+              CALC=no
+              CALC=Sometimes
+              CALC=Frequently
+              CALC=Always
+              FAVC=yes
+              FCVC
+              NCP
+              SCC=yes
+              SMOKE=yes
+              CH2O
+              family_history_with_overweight=no
+              FAF
+              TUE
+              CAEC=Sometimes
+              CAEC=Frequently
+              CAEC=Always
+              CAEC=no
+              MTRANS=Public_Transportation
+              MTRANS=Walking
+              MTRANS=Automobile
+              MTRANS=Motorbike
+              MTRANS=Bike
+              NObeyesdad
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Weight <= 0.451724
+|   Weight <= 0.156716
+|   |   Height <= 0.396226
+|   |   |   Weight <= 0.057132
+|   |   |   |   MTRANS=Automobile <= 0
+|   |   |   |   |   Height <= 0.119249: Normal_Weight (3.0)
+|   |   |   |   |   Height > 0.119249
+|   |   |   |   |   |   FCVC <= 0.502073
+|   |   |   |   |   |   |   Weight <= 0.032575: Insufficient_Weight (10.0)
+|   |   |   |   |   |   |   Weight > 0.032575: Normal_Weight (4.0/1.0)
+|   |   |   |   |   |   FCVC > 0.502073: Insufficient_Weight (73.0)
+|   |   |   |   MTRANS=Automobile > 0: Normal_Weight (2.0)
+|   |   |   Weight > 0.057132
+|   |   |   |   Height <= 0.165604
+|   |   |   |   |   FAVC=yes <= 0: Normal_Weight (2.0)
+|   |   |   |   |   FAVC=yes > 0
+|   |   |   |   |   |   SCC=yes <= 0
+|   |   |   |   |   |   |   Weight <= 0.129157: Normal_Weight (5.0)
+|   |   |   |   |   |   |   Weight > 0.129157: Overweight_Level_I (4.0/1.0)
+|   |   |   |   |   |   SCC=yes > 0: Overweight_Level_I (6.0)
+|   |   |   |   Height > 0.165604
+|   |   |   |   |   Weight <= 0.087048
+|   |   |   |   |   |   Height <= 0.293215: Normal_Weight (22.0)
+|   |   |   |   |   |   Height > 0.293215: Insufficient_Weight (8.0/1.0)
+|   |   |   |   |   Weight > 0.087048: Normal_Weight (84.0/1.0)
+|   |   Height > 0.396226
+|   |   |   Weight <= 0.119383: Insufficient_Weight (124.0)
+|   |   |   Weight > 0.119383
+|   |   |   |   Height <= 0.566762: Normal_Weight (19.0/1.0)
+|   |   |   |   Height > 0.566762
+|   |   |   |   |   FAF <= 0.443506: Normal_Weight (4.0)
+|   |   |   |   |   FAF > 0.443506: Insufficient_Weight (50.0)
+|   Weight > 0.156716
+|   |   Weight <= 0.276119
+|   |   |   Height <= 0.262453
+|   |   |   |   FAVC=yes <= 0: Overweight_Level_II (39.0/1.0)
+|   |   |   |   FAVC=yes > 0
+|   |   |   |   |   Weight <= 0.231343: Overweight_Level_I (24.0)
+|   |   |   |   |   Weight > 0.231343: Obesity_Type_I (4.0)
+|   |   |   Height > 0.262453
+|   |   |   |   Height <= 0.537419
+|   |   |   |   |   Weight <= 0.246269
+|   |   |   |   |   |   Height <= 0.373855
+|   |   |   |   |   |   |   Weight <= 0.189552: Normal_Weight (12.0/1.0)
+|   |   |   |   |   |   |   Weight > 0.189552: Overweight_Level_I (85.0/3.0)
+|   |   |   |   |   |   Height > 0.373855
+|   |   |   |   |   |   |   Age <= 0.286686: Normal_Weight (55.0/2.0)
+|   |   |   |   |   |   |   Age > 0.286686
+|   |   |   |   |   |   |   |   CAEC=Sometimes <= 0: Normal_Weight (2.0)
+|   |   |   |   |   |   |   |   CAEC=Sometimes > 0: Overweight_Level_I (5.0)
+|   |   |   |   |   Weight > 0.246269
+|   |   |   |   |   |   Age <= 0.136989
+|   |   |   |   |   |   |   Age <= 0.095363: Overweight_Level_I (3.0)
+|   |   |   |   |   |   |   Age > 0.095363: Overweight_Level_II (6.0)
+|   |   |   |   |   |   Age > 0.136989: Overweight_Level_I (56.0)
+|   |   |   |   Height > 0.537419
+|   |   |   |   |   Height <= 0.754717
+|   |   |   |   |   |   Weight <= 0.270946: Normal_Weight (51.0)
+|   |   |   |   |   |   Weight > 0.270946
+|   |   |   |   |   |   |   Age <= 0.30837: Normal_Weight (2.0)
+|   |   |   |   |   |   |   Age > 0.30837: Overweight_Level_I (2.0)
+|   |   |   |   |   Height > 0.754717
+|   |   |   |   |   |   Weight <= 0.197194: Insufficient_Weight (6.0)
+|   |   |   |   |   |   Weight > 0.197194: Normal_Weight (4.0)
+|   |   Weight > 0.276119
+|   |   |   Height <= 0.526749
+|   |   |   |   Height <= 0.370547
+|   |   |   |   |   Weight <= 0.395522: Obesity_Type_I (122.0/3.0)
+|   |   |   |   |   Weight > 0.395522: Obesity_Type_II (4.0)
+|   |   |   |   Height > 0.370547
+|   |   |   |   |   Weight <= 0.345643
+|   |   |   |   |   |   Height <= 0.406036
+|   |   |   |   |   |   |   Weight <= 0.3163: Overweight_Level_II (25.0)
+|   |   |   |   |   |   |   Weight > 0.3163: Obesity_Type_I (11.0)
+|   |   |   |   |   |   Height > 0.406036: Overweight_Level_II (112.0/1.0)
+|   |   |   |   |   Weight > 0.345643
+|   |   |   |   |   |   Weight <= 0.370713
+|   |   |   |   |   |   |   Height <= 0.462258: Obesity_Type_I (15.0)
+|   |   |   |   |   |   |   Height > 0.462258: Overweight_Level_II (7.0)
+|   |   |   |   |   |   Weight > 0.370713: Obesity_Type_I (64.0/1.0)
+|   |   |   Height > 0.526749
+|   |   |   |   Weight <= 0.38806
+|   |   |   |   |   Height <= 0.65996
+|   |   |   |   |   |   Weight <= 0.330322
+|   |   |   |   |   |   |   Age <= 0.343902: Overweight_Level_I (48.0/1.0)
+|   |   |   |   |   |   |   Age > 0.343902: Overweight_Level_II (4.0/1.0)
+|   |   |   |   |   |   Weight > 0.330322
+|   |   |   |   |   |   |   NCP <= 0.684966: Overweight_Level_II (54.0)
+|   |   |   |   |   |   |   NCP > 0.684966: Overweight_Level_I (4.0/1.0)
+|   |   |   |   |   Height > 0.65996
+|   |   |   |   |   |   Weight <= 0.339537: Normal_Weight (14.0)
+|   |   |   |   |   |   Weight > 0.339537
+|   |   |   |   |   |   |   CAEC=Frequently <= 0: Overweight_Level_I (55.0/3.0)
+|   |   |   |   |   |   |   CAEC=Frequently > 0: Normal_Weight (3.0/1.0)
+|   |   |   |   Weight > 0.38806
+|   |   |   |   |   Height <= 0.650617: Obesity_Type_I (31.0/1.0)
+|   |   |   |   |   Height > 0.650617: Overweight_Level_II (33.0/1.0)
+Weight > 0.451724
+|   Gender=Male <= 0: Obesity_Type_III (324.0/1.0)
+|   Gender=Male > 0
+|   |   Age <= 0.181362
+|   |   |   FCVC <= 0.785637: Obesity_Type_I (68.0/3.0)
+|   |   |   FCVC > 0.785637
+|   |   |   |   FAF <= 0.322542: Obesity_Type_II (13.0)
+|   |   |   |   FAF > 0.322542: Obesity_Type_I (3.0/1.0)
+|   |   Age > 0.181362
+|   |   |   Weight <= 0.526862
+|   |   |   |   CALC=no <= 0
+|   |   |   |   |   Height <= 0.783321: Obesity_Type_I (41.0/1.0)
+|   |   |   |   |   Height > 0.783321: Overweight_Level_II (5.0)
+|   |   |   |   CALC=no > 0: Obesity_Type_II (49.0)
+|   |   |   Weight > 0.526862: Obesity_Type_II (226.0/1.0)
+
+Number of Leaves  : 	57
+
+Size of the tree : 	113
+
+
+Time taken to build model: 0.17 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1980               93.7944 %
+Incorrectly Classified Instances       131                6.2056 %
+Kappa statistic                          0.9275
+Mean absolute error                      0.0218
+Root mean squared error                  0.1295
+Relative absolute error                  8.9088 %
+Root relative squared error             37.0333 %
+Total Number of Instances             2111     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.864    0.019    0.879      0.864    0.872      0.852    0.956     0.833     Normal_Weight
+                 0.879    0.023    0.861      0.879    0.870      0.849    0.952     0.808     Overweight_Level_I
+                 0.928    0.013    0.918      0.928    0.923      0.910    0.974     0.903     Overweight_Level_II
+                 0.957    0.010    0.949      0.957    0.953      0.944    0.979     0.937     Obesity_Type_I
+                 0.971    0.005    0.967      0.971    0.969      0.964    0.992     0.969     Insufficient_Weight
+                 0.960    0.002    0.986      0.960    0.973      0.968    0.987     0.953     Obesity_Type_II
+                 0.997    0.001    0.997      0.997    0.997      0.996    0.998     0.990     Obesity_Type_III
+Weighted Avg.    0.938    0.010    0.938      0.938    0.938      0.928    0.977     0.915     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   g   <-- classified as
+ 248  28   2   0   9   0   0 |   a = Normal_Weight
+  25 255  10   0   0   0   0 |   b = Overweight_Level_I
+   1  11 269   9   0   0   0 |   c = Overweight_Level_II
+   0   2  10 336   0   3   0 |   d = Obesity_Type_I
+   8   0   0   0 264   0   0 |   e = Insufficient_Weight
+   0   0   2   9   0 285   1 |   f = Obesity_Type_II
+   0   0   0   0   0   1 323 |   g = Obesity_Type_III
+
